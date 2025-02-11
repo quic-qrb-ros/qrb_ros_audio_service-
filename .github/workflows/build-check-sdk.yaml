@@ -49,8 +49,9 @@ jobs:
       - name: Download dependencies
         run: |
           cd ${WORKSPACE}
-          # no QRB ROS dependencies
-        
+          git clone https://github.com/quic-qrb-ros/qrb_ros_common.git
+          git clone https://github.com/quic-qrb-ros/qrb_ros_interfaces.git
+
       - name: build
         run: |
           cd ${SDK_DIR}
